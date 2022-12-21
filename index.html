@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- <script src="" async defer></script> -->
+    <script>
+        let textList = ['First', 'Second', 'Third'];
+
+        function refresh() {
+
+        }
+
+        function outputText(text) {
+            let element = document.createElement('div');
+            element.innerText = text;
+            document.body.appendChild(element);
+        }
+
+        function addTextFromInput() {
+            let field = document.getElementById('field');
+            textList.push(field.value);
+        }
+
+        function submitText() {
+            addTextFromInput();
+            outputText(textList[textList.length - 1]);
+        }
+
+        textList.forEach(
+            function (item) { outputText(item); }
+        )
+    </script>
+    <input id="field" title="field" type="text" placeholder="Enter text here">
+    <button type="button" onclick="submitText()">Press Me!</button>
+</body>
+
+</html>
