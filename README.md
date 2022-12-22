@@ -1,6 +1,6 @@
 # test_javascript
 
-Hello Javascript!
+Hello JavaScript!
 
 Source:
 https://www.youtube.com/watch?v=DqaTKBU9TZk
