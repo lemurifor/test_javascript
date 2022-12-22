@@ -12,35 +12,13 @@
 
 <body>
     <!-- <script src="" async defer></script> -->
-    <script>
-        let textList = ['First', 'Second', 'Third'];
+    <script src="index.js" defer></script>
 
-        function refresh() {
-
-        }
-
-        function outputText(text) {
-            let element = document.createElement('div');
-            element.innerText = text;
-            document.body.appendChild(element);
-        }
-
-        function addTextFromInput() {
-            let field = document.getElementById('field');
-            textList.push(field.value);
-        }
-
-        function submitText() {
-            addTextFromInput();
-            outputText(textList[textList.length - 1]);
-        }
-
-        textList.forEach(
-            function (item) { outputText(item); }
-        )
-    </script>
-    <input id="field" title="field" type="text" placeholder="Enter text here">
-    <button type="button" onclick="submitText()">Press Me!</button>
+    <input id="dateField" type="date" placeholder="Enter date here">
+    <input id="descField" type="text" placeholder="Enter description here">
+    <button id="submitButton" type="button" onclick="onSubmitButtonPressed()">Submit</button>
+    <button id="resetButton" type="button" onclick="onResetButtonPressed()">Reset</button>
+    <div id="toDoListDiv"></div>
 </body>
 
 </html>
